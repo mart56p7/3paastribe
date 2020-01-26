@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe</title>
+    <script th:src="@{/jquery.min.3.4.1.js}"></script>
+    <script type="text/javascript" th:inline="javascript" >
+        var crossimage = /*[[@{/images/badsmiley.png}]]*/ null;
+        var circleimage = /*[[@{/images/smiley.png}]]*/ null;
+    </script>
+    <script th:src="@{/ttt.js}"></script>
+    <link rel="stylesheet" th:href="@{/style.css}" type="text/css">
+</head>
+<body>
+<div class="page">
+    <h1>Tic-Tac-Toe</h1>
+    <div id="gamecompleted">
+        <div id="gamecompletedwinner">
+            <h2>You are a winner!</h2>
+            <p th:text="${winnertext}"></p>
+        </div>
+        <div id="gamecompletedlooser">
+            <h2>You lost!</h2>
+            <p th:text="${loosertext}"></p>
+        </div>
+    </div>
+    <div id="game">
+        <div id="gameopponentinfo" style="width: 400px; margin: 0px auto">
+                <div id="gameopponentname">Opponent</div>
+        </div>
+        <div>
+            <div id="circlepieces">
+                <div class="line">
+                    <div id="field10" class="field" onclick="javascript: move('field10', 10);">
+
+                    </div>
+                </div>
+                <div class="line">
+                    <div id="field11" class="field" onclick="javascript: move('field11', 11);">
+
+                    </div>
+                </div>
+                <div class="line">
+                    <div id="field12" class="field"  onclick="javascript: move('field12', 12);">
+
+                    </div>
+                </div>
+            </div>
+            <div id="board">
+                <div class="line">
+                    <div id="field1" class="field" onclick="javascript: move('field1', 1);">
+
+                    </div>
+                    <div id="field2" class="field" onclick="javascript: move('field2', 2);">
+
+                    </div>
+                    <div id="field3" class="field" onclick="javascript: move('field3', 3);">
+
+                    </div>
+                </div>
+                <div class="line">
+                    <div id="field4" class="field" onclick="javascript: move('field4', 4);">
+
+                    </div>
+                    <div id="field5" class="field" onclick="javascript: move('field5', 5);">
+
+                    </div>
+                    <div id="field6" class="field" onclick="javascript: move('field6', 6);">
+
+                    </div>
+                </div>
+                <div class="line">
+                    <div id="field7" class="field" onclick="javascript: move('field7', 7);">
+
+                    </div>
+                    <div id="field8" class="field" onclick="javascript: move('field8', 8);">
+
+                    </div>
+                    <div id="field9" class="field" onclick="javascript: move('field9', 9);">
+
+                    </div>
+                </div>
+            </div>
+            <div id="crosspieces">
+                <div class="line">
+                    <div id="field13" class="field" onclick="javascript: move('field13', 13);">
+
+                    </div>
+                </div>
+                <div class="line">
+                    <div id="field14" class="field" onclick="javascript: move('field14', 14);">
+
+                    </div>
+                </div>
+                <div class="line">
+                    <div id="field15" class="field" onclick="javascript: move('field15', 15);">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameplayerinfo" style="width: 400px; margin: 0px auto">
+            <div style="display: block; width: 100%;">
+                <div id="gameplayername">YOU</div>
+            </div>
+            <div id="gameplayeroptions" style="display: block; padding-top: 20px">
+                <a href="javascript: surrenderGame();" class="button">Surrender!</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="gamemenu">
+    <div id="queuejoin">
+        <h2>Join queue</h2>
+        <input type="text" name="playername" value="" placeholder="Write your name or get a random name" id="playername">
+        <a href="javascript: joinQueue();" class="buttonmax">Join queue</a>
+    </div>
+
+
+    <div id="queueinfo">
+        <h2>Looking for opponent</h2>
+        <img th:src="@{/images/loadicon.gif}" id="queueinfoimg">
+        <a href="javascript: leaveQueue();" class="buttonmax">Leave queue</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+        body{
+            background-color: #F6F6F6;
+        }
+        div.page{
+            margin: 0px auto;
+        }
+
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+
+        h2{
+            width: 100%;
+            text-align: center;
+        }
+
+        div.circle{
+            margin: 0px; auto;
+            border-radius: 50%;
+            width: 90%;
+            height: 90%;
+            background: darkgray;
+            border: 3px solid red;
+        }
+
+        div.cross{
+            margin: 0px; auto;
+            width: 90%;
+            height: 90%;
+            content: "X";
+            color: RED;
+            font-size: 2em;
+        }
+
+        #game{
+            display: none;
+            margin: 0px auto;
+            width: 800px;
+
+        }
+
+        #circlepieces{
+            margin-right: 35px;
+            display: inline-block
+        }
+
+        #crosspieces{
+            margin-left: 35px;
+            display: inline-block
+        }
+
+        #board{
+            background-color: black;
+            margin: 0px;
+            padding: 35px;
+            display: inline-block;
+        }
+        div.line{
+            display: block;
+
+            margin: 0px;
+            padding: 0px;
+        }
+        div.field{
+            display: inline-block;
+            border: 3px solid silver;
+            width: 120px;
+            height: 120px;
+            margin: 0px;
+            padding: 0px;
+            background-color: darkgray;
+        }
+
+        #gamecompleted{
+            display: none;
+            margin: 0px auto;
+            width: 400px;
+        }
+
+        #gamemenu{
+            margin: 0px auto;
+            padding-top: 30px;
+            width: 400px;
+        }
+
+        #queuejoin{
+            width: 100%;
+        }
+
+        #playername{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 25px;
+            border: 1px dotted black
+        }
+
+        #queueinfo{
+            width: 100%;
+            display: none;
+            align-content: center;
+            text-align:center;
+        }
+
+        #queueinfo p{
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        #queueinfoimg{
+
+        }
+
+        a.button{
+            display: block;
+            text-align: center;
+            border-radius: 25px;
+            background-color: silver;
+            border: 1px dotted black;
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        a.button:hover{
+            display: block;
+            text-align: center;
+            border-radius: 25px;
+            background-color: silver;
+            border: 1px dotted black;
+            color: black;
+            padding: 10px;
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        a.buttonmax{
+            display: block;
+            width: 100%;
+            text-align: center;
+            border-radius: 25px;
+            background-color: silver;
+            border: 1px dotted black;
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        a.buttonmax:hover{
+            display: block;
+            width: 100%;
+            text-align: center;
+            border-radius: 25px;
+            background-color: silver;
+            border: 1px dotted black;
+            color: black;
+            padding: 10px;
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        div.gameplayername{
+            font-size: 17px;
+        }
+
+        img.playericon{
+            height: 15px;
+            padding-right: 5px;
+            padding-top: 3px;
+        }
+
+        div.gameopponentname{
+            font-size: 17px;
+            align-content: ;
+        }
+
+        img.opponenticon{
+            height: 15px;
+            padding-right: 5px;
+            padding-top: 3px;
+        }
